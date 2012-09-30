@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<title>About the project</title>
+	<link rel="stylesheet" href="stylesheets/iphone.css" />
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAl_Aitbh_FmAMmvuNExykuhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTA4srHKSr60kdCXvaYTS3obGYSHQ" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8">	
+	function clickclear(thisfield, defaulttext) {
+		if (thisfield.value == defaulttext) {
+			thisfield.value = "";
+		}
+	}
+	
+	function clickrecall(thisfield, defaulttext) {
+		if (thisfield.value == "") {
+		thisfield.value = defaulttext;
+		}
+	}
+	</script>
+	<script type="text/javascript">
+    //<![CDATA[
+    function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.setCenter(new GLatLng(38.898515,-77.023773), 10);
+      }
+    }
+    //]]>
+    </script>
+</head>
+
+<body onload="load()" onunload="GUnload()">
+<div style="margin-top:5px; text-align:center;"><img src="images/Park_it_Dc/Park_It_DC.gif" style="margin-right:10px;" /></div>
+<div id="map" class="test" style="width:300px;height:300px;"></div>
+
+<ul class="form">
+	<li><input type="text" name="name" value="Enter Address" id="some_name" onclick="clickclear(this, 'Enter Address')" onblur="clickrecall(this,'Enter Address')" /></li>
+</ul>
+<ul class="individual">
+	<li><a href="address.html">Search</a></li>
+	<li><a href="index.html">Back</a></li>	
+</ul>
+</body>
+</html>

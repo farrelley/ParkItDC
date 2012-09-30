@@ -1,0 +1,11 @@
+html, body { position: relative; }
+
+#page-header { position: absolute; }
+
+#wrapper { margin-top: 260px; border: 1px solid #ffffff; } 
+
+#wrapper-address { margin-top: 410px; border: 1px solid #ffffff; } 
+
+#wrapper-meter { margin-top: 310px; border: 1px solid #ffffff; } 
+
+#sidebar { width: 190px; }

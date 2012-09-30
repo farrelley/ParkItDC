@@ -1,0 +1,11 @@
+ParkItDC was created for the first App for Democracy (http://appsfordemocracy.org).
+ParkItDC allows District of Columbia residents and visitors to search for parking information.
+
+
+Search and replace the following
+PIDC_USERNAME
+PIDC_PASSWORD
+PIDC_SERVER
+PIDC_SCHEMA
+
+Run files in Database folder.

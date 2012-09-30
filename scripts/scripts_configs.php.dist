@@ -1,0 +1,8 @@
+<?php
+
+//database were the xml file data lives
+define('USERNAME', '');
+define('PASSWORD', '');
+define('SERVER', '');
+define('SCHEMA', '');
+?>

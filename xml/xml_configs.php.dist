@@ -1,0 +1,10 @@
+<?php
+
+ini_set('date.timezone','America/New_York'); // sets the default timezone
+
+//database were the xml file data lives
+define('USERNAME', '');
+define('PASSWORD', '');
+define('SERVER', '');
+define('SCHEMA', '');
+?>

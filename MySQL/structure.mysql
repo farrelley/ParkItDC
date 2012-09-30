@@ -1,0 +1,132 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.9.1
+-- http://www.phpmyadmin.net
+--
+-- Generation Time: Nov 08, 2008 at 11:06 AM
+-- Server version: 5.0.67
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `parkitdc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Auto_Crime`
+--
+
+CREATE TABLE IF NOT EXISTS `Auto_Crime` (
+  `ID` char(20) NOT NULL,
+  `NAME` varchar(500) NOT NULL,
+  `DATE` varchar(100) NOT NULL,
+  `SHIFT` char(10) NOT NULL,
+  `WARD` char(1) NOT NULL,
+  `METHOD` varchar(2000) NOT NULL,
+  `LOCATION` varchar(2000) NOT NULL,
+  `NARRATIVE` varchar(2000) NOT NULL,
+  `LATITUDE` varchar(100) NOT NULL,
+  `LONGITUDE` varchar(100) NOT NULL,
+  `LAST_UPDATED_DATETIME` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Hanson`
+--
+
+CREATE TABLE IF NOT EXISTS `Hanson` (
+  `ID` char(20) NOT NULL,
+  `METERNUM` varchar(100) NOT NULL,
+  `SERVICE_PRIORITY` varchar(2000) NOT NULL,
+  `SERVICE_CODE_DESC` varchar(2000) NOT NULL,
+  `SERVICE_ORDER_DATE` varchar(500) NOT NULL,
+  `SERVICE_ORDER_STATUS` varchar(2000) NOT NULL,
+  `CALL_COUNT` varchar(100) NOT NULL,
+  `RESOLUTION_DATE` varchar(100) NOT NULL,
+  `RESOLUTION` varchar(100) NOT NULL,
+  `SERVICE_DUE_DATE` varchar(2000) NOT NULL,
+  `SERVICE_NOTES` varchar(2000) NOT NULL,
+  `LOCATION` varchar(2000) NOT NULL,
+  `WARD` char(1) NOT NULL,
+  `LATITUDE` varchar(100) NOT NULL,
+  `LONGITUDE` varchar(100) NOT NULL,
+  `LAST_UPDATED_DATETIME` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Method`
+--
+
+CREATE TABLE IF NOT EXISTS `Method` (
+  `METHOD` varchar(500) NOT NULL,
+  `DESCRIPTION` varchar(2000) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Parking`
+--
+
+CREATE TABLE IF NOT EXISTS `Parking` (
+  `METERNUM` varchar(20) NOT NULL,
+  `BLOCK` varchar(20) default NULL,
+  `STREET` varchar(500) default NULL,
+  `SIDE` char(1) default NULL,
+  `HOUR_FROM` char(4) default NULL,
+  `HOUR_TO` char(4) default NULL,
+  `DAY_FROM` char(1) default NULL,
+  `DAY_TO` char(1) default NULL,
+  `LIMIT` char(10) default NULL,
+  `RATE` char(10) default NULL,
+  `MAINT_ROUT` char(10) default NULL,
+  `COLLECTION` char(10) default NULL,
+  `WARD` char(1) default NULL,
+  `STAT` varchar(100) default NULL,
+  `COMMENTS` varchar(2000) default NULL,
+  `YEAR` year(4) default NULL,
+  `LONGITUDE` varchar(100) NOT NULL,
+  `LATITUDE` varchar(100) NOT NULL,
+  PRIMARY KEY  (`METERNUM`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Recent_Searches`
+--
+
+CREATE TABLE IF NOT EXISTS `Recent_Searches` (
+  `ID` int(4) NOT NULL auto_increment,
+  `TYPE` varchar(100) NOT NULL,
+  `VALUE` varchar(2000) NOT NULL,
+  `DATE` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `LATITUDE` varchar(200) NOT NULL,
+  `LONGITUDE` varchar(200) NOT NULL,
+  PRIMARY KEY  (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=413 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `RPP`
+--
+
+CREATE TABLE IF NOT EXISTS `RPP` (
+  `ID` int(11) NOT NULL auto_increment,
+  `Location` varchar(2000) NOT NULL,
+  `Street_Side` char(1) NOT NULL,
+  `Ward` char(1) NOT NULL,
+  `Longitude` varchar(100) NOT NULL,
+  `Latitude` varchar(100) NOT NULL,
+  `Street_Line` text NOT NULL,
+  PRIMARY KEY  (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3400 ;
